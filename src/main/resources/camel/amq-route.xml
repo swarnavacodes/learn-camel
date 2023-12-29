@@ -1,0 +1,9 @@
+<route id=" xml-test-route">
+    <from uri="timer:mytimer?period=5000"/>
+    <autoStartup>true</autoStartup>
+    <setBody>
+        <constant>HELLO from Camel via xml dsl route!</constant>
+    </setBody>
+    <log message="Sending ${body} to sample AMQ queue"/>
+    <to uri="activemq:queue:sample"/>
+</route>

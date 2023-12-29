@@ -1,6 +1,6 @@
 <routes xmlns="http://camel.apache.org/schema/spring">
-    <route id="test">
+    <route id="test-xml">
         <from uri="timer://xmlTimer?fixedRate=true&amp;period=5000"/>
-        <to uri="log:outputLog?logMask=true"/>
+        <to uri="log:simpleLog?logMask=true"/>
     </route>
 </routes>
